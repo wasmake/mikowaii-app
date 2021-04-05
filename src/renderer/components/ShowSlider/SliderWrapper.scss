@@ -1,0 +1,23 @@
+.slider-wrapper {
+  padding: 40px 0;
+  position: relative;
+  z-index: 8;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--open .item {
+    max-width: 180px !important;
+  }
+
+  &--open .item:not(.item--open){
+    opacity: 0.5;
+  }
+
+  &--open .slide-button {
+    display: none;
+  }
+
+}

@@ -1,0 +1,32 @@
+.show-details-button {
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 300ms ease 100ms;
+    background: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+    z-index: 5;
+  
+    span {
+      position: absolute;
+      bottom: 4%;
+      left: 0;
+      right: 0;
+      display: block;
+      width: 30px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.9);
+      transition: transform 300ms ease 100ms;
+    }
+  }
+
+  .show-details-button span:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1) !important;
+    transform: scale(1.4) !important;
+  }
+  

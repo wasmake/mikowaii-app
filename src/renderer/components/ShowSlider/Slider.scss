@@ -1,0 +1,72 @@
+
+.slider {
+  display: flex;
+  position: relative;
+
+  &__container {
+    display: flex;
+    padding: 0 55px;
+    transition: transform 300ms ease 100ms;
+    z-index: 3;
+    width: 100%;
+  }
+
+  &:not(&--open) .item:hover .show-details-button {
+    opacity: 1;
+    bottom: 10%;
+  }
+
+  &:not(&--open) .item:hover {
+    transform: scale(1.1) !important;
+    animation: getbigger 0.5s ease-in forward;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:not(&--open) .item:hover::after {
+    transform: none !important;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:not(&--open) .item:hover > .overlay p {
+    text-shadow: 0px 0px 20px rgba(0,0,0,1) !important;
+  }
+
+  &:not(&--open) .item:hover::after {
+    background: linear-gradient(359deg, rgba(0,0,0,0.6) 0%, rgba(9,9,121,0) 50%, rgba(0,0,0,1) 100%);
+    animation: shadowitem 1s ease-in-out forwards;
+  }
+
+  &:not(&--open) .item:hover img {
+    transform: scale(1.2) !important;
+    cursor: pointer;
+  }
+
+  &:not(&--open) .item:hover {
+    margin: 0 1.5%;
+  }
+}
+
+@keyframes getbigger {
+  0% {
+    transform: scale(1) !important;
+  }
+
+  100% {
+    transform: scale(1.1) !important;
+  }
+}
+
+@keyframes shadowitem {
+  0% {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0, 0, 0, 0)) !important;
+  }
+  40% {
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0, 0, 0, 0)) !important;
+  }
+  100% {
+    background: linear-gradient(359deg, rgba(0,0,0,0.6) 0%, rgba(9,9,121,0) 50%, rgba(0,0,0,1) 100%);
+  }
+}
+
